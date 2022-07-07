@@ -14,6 +14,7 @@ int main(void)
     **d = 8;
     *d = &b; // ponteiro d que aponta para c recebe o endereço de b
     
+
     printf("VALORES DE A E B:\n%d %d\n", a, *c);
 
     *c = 4;
