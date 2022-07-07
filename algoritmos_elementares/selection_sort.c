@@ -15,7 +15,7 @@ int main(void)
 
     for(int i = 0; i <= 5; i++)
     {
-        v[i] = rand() % 100;
+        v[i] = rand() % 99;
     }
 
     imprime(v, 6);
@@ -49,7 +49,7 @@ void selection_sort(int *v, int l, int r)
 
     exch(v[menor_elem], v[l]);
 
-    imprime(v, 6);
+    //imprime(v, 6);
 
     selection_sort(v, l+1, r);
 }
@@ -63,6 +63,5 @@ void selection_sort_iterativa(int *v, int l, int r)
         for(int j = i+1; j <= r; j++)
             cmpexch(v[menor_elem], v[j]);
     }
-
 
 }

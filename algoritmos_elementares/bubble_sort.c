@@ -5,6 +5,7 @@
 
 void imprime(int *v, int tam);
 void bubble_sort(int *v, int l, int r);
+void bubble_sort_recursivo(int *v, int l, int r);
 
 int main(void)
 {
@@ -14,7 +15,7 @@ int main(void)
 
     for(int i = 0; i <= 5; i++)
     {
-        v[i] = rand() % 100;
+        v[i] = rand() % 99;
     }
 
     imprime(v, 6);
@@ -39,6 +40,21 @@ void bubble_sort(int *v, int l, int r)
     {   
         for(int j = l; j < r; j++)
             cmpexch(v[j], v[j+1]);
-        imprime(v, 6);
+        //imprime(v, 6);
     }
+}
+
+void bubble_sort_recursivo(int *v, int l, int r)
+{
+    if(l == r)
+        return;
+
+    for(int j = l; j < r; j++)
+    {
+
+        cmpexch(v[j], v[j + 1]);
+
+    }
+
+    bubble_sort_recursivo(v, l + 1, r);
 }
