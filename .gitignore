@@ -54,4 +54,6 @@ dkms.conf
 env/
 venv/
 
-app 
+app
+
+.vscode/
